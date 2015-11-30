@@ -1,0 +1,29 @@
+﻿{
+  "manifest_version": 2,
+  "name": "damn_jwxt",
+  "version": "0.2.0",
+  "description": "西电教学评估速选器 --- by Stephen",
+  "permissions": [
+    "tabs",
+    "http://jwxt.xidian.edu.cn//*",
+    "notifications"
+  ],
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
+  },
+  "icons": {
+    "16": "icon/icon16.png",
+    "48": "icon/icon48.png",
+    "128": "icon/icon128.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "icon/icon19.png",
+      "38": "icon/icon38.png"
+    },
+    "default_title": "西电教学评估速选器 --- by Stephen",
+    "default_popup": "popup.html"
+  }
+}
