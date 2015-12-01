@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
 		req[1] = comment;
 		reqStr = JSON.stringify(req);
 		chrome.tabs.executeScript(null, {
-			code: "fastChoose(" + reqStr + ");", allFrames: true
+			code: "fastChoose(" + reqStr + ");"
 		});
 	};
 });
