@@ -1,4 +1,4 @@
-﻿body {
+﻿body  {
 	width: 320px;
 	background-color: #1bbc9b;
 	color: rgba(255, 255, 255, .8);
@@ -6,58 +6,35 @@
 	text-align: center;
 }
 
-#aha{
-	margin-top: 15px;
-	color: #1bbc9b;
-	transition: color 2.5s ease-out;
-	-webkit-transition: color 2.5s ease-out;
-}
-
-#aha:hover{
-	color: rgba(255, 255, 255, .8);
-}
-
-.aha{
-	color: rgba(255, 255, 255, .4) !important;
-	animation: move 5s;
-	-webkit-animation: move 5s;
-}
-
 #tip{
-	padding: 14px;
-	margin: 10px auto 30px;
+	padding: 8px 14px;
+	margin: 10px;
 	border: 1px solid rgba(255, 255, 255, .3);
 	border-radius: 6px;
 	line-height: 24px;
-	transition: transform .8s;
-	-webkit-transition: -webkit-transform .8s;
+	font-size: 14px;
 }
 
-#tip:hover{
-	transform: rotateY(-360deg);
-	-webkit-transform: rotateY(-360deg);
-}
-
-.input-group{
+.input-group {
 	float: left;
 	padding: 5px;
 	margin-top: 4px;
 	width: 70px;
 }
 
-.input-tip{
+.input-tip {
 	margin-bottom: 6px;
 	font-size: 14px;
 	transition: transform .8s;
 	-webkit-transition: -webkit-transform .8s;
 }
 
-.input-tip:hover{
+.input-tip:hover {
 	transform: rotateY(-720deg);
 	-webkit-transform: rotateY(-720deg);
 }
 
-input{
+input {
 	width: 100%;
 	height: 24px;
 	margin-bottom: 16px;
@@ -68,22 +45,23 @@ input{
 	color: rgba(255, 255, 255, .65);
 }
 
-input:focus,textarea:focus{
+input:focus,
+textarea:focus {
 	outline-color: #0FAA89;
 }
 
-.comment-tip{
+.main-tip,
+.comment-tip {
+	font-style: italic;
+}
+
+.comment-tip {
 	margin-bottom: 10px;
 }
 
-.comment-tip:hover{
-	animation: shake .5s;
-	-webkit-animation: shake .5s;
-}
-
-textarea{
+textarea {
 	width:100%;
-	height: 60px;
+	height: 40px;
 	padding: 5px 8px;
 	box-sizing: border-box;
 	background: #17AD8E;
@@ -94,7 +72,7 @@ textarea{
 	resize: none;
 }
 
-#go{
+#go {
 	position: relative;
 	display: block;
 	width: 100%;
@@ -109,55 +87,57 @@ textarea{
 	cursor: pointer;
 }
 
-#go:hover{
+#go:hover {
 	background-color: #0D9576;
 }
 
-#go:hover > .pikachuu{
+#go:hover > .pikachuu {
 	transform: translate3d(115px,0,0);
 	-webkit-transform: translate3d(115px,0,0);
 }
 
-.pikachuu{
+.pikachuu {
 	position: absolute;
 	margin-left: -35px;
 	transition: transform 1s;
 	-webkit-transition: -webkit-transform 1s;
 }
 
-#title{
+#title {
 	margin-top: 10px;
 	color: rgba(255, 255, 255, .5);
 }
 
-#title a{
+#title a {
 	color: rgba(255, 255, 255, .7);
 }
 
-@keyframes move{
+@keyframes move {
 	0%   {transform: translate3d(0,0,0);}
 	35%	 {transform: translate3d(-80px,380px,0);}
 	65%  {transform: translate3d(80px,380px,0);}
 }
 
-@-webkit-keyframes move{
+@-webkit-keyframes move {
 	0%   {-webkit-transform: translate3d(0,0,0);}
 	35%	 {-webkit-transform: translate3d(-80px,380px,0);}
 	65%  {-webkit-transform: translate3d(80px,380px,0);}
 }
 
-@keyframes shake{
-	0%   {transform: translate3d(0,0,0);}
-	20%	 {transform: translate3d(-20px,0,0);}
-	40%	 {transform: translate3d(20px,0,0);}
-	60%	 {transform: translate3d(-20px,0,0);}
-	85%  {transform: translate3d(20px,0,0);}
+::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
 }
 
-@-webkit-keyframes shake{
-	0%   {-webkit-transform: translate3d(0,0,0);}
-	20%	 {-webkit-transform: translate3d(-20px,0,0);}
-	40%	 {-webkit-transform: translate3d(20px,0,0);}
-	60%	 {-webkit-transform: translate3d(-20px,0,0);}
-	85%  {-webkit-transform: translate3d(20px,0,0);}
+::-webkit-scrollbar {
+  width: 6px;
+  height: 0;
+}
+
+::-webkit-scrollbar-thumb {
+  -webkit-border-radius: 6px;
+  border-radius: 6px;
+  background: rgba(255,255,255,.35);
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.15);
 }

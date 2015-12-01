@@ -10,13 +10,14 @@ function fastChoose(data) {
 		fliter2 = /^[0-9.]{1,}_0.8$/,
 		fliter3 = /^[0-9.]{1,}_0.6$/,
 		fliter4 = /^[0-9.]{1,}_0.4$/;
-	var textArea = window.frames['bottomFrame'].frames['mainFrame'].document.getElementsByTagName('textarea');
-	var radios = window.frames['bottomFrame'].frames['mainFrame'].document.getElementsByTagName('table')[4].getElementsByTagName('table')[6].getElementsByTagName('table')[0].getElementsByTagName('input');
-	var buttons = window.frames['bottomFrame'].frames['mainFrame'].document.getElementsByTagName('img');
+	var mainFrame = window.frames['bottomFrame'].frames['mainFrame'];
+	var textArea = mainFrame.document.getElementsByTagName('textarea');
+	var radios = mainFrame.document.getElementsByTagName('table')[4].getElementsByTagName('table')[6].getElementsByTagName('table')[0].getElementsByTagName('input');
+	var buttons = mainFrame.document.getElementsByTagName('img');
 	for (var i = 0; i < 4; i++) {
 		rateSum += parseInt(rate[i]);
 	}
-	for (i in radios) {
+	for (var i in radios) {
 		radio = radios[i];
 		random = Math.ceil(Math.random() * rateSum);
 		if (random <= parseInt(rate[0])) {
@@ -29,13 +30,15 @@ function fastChoose(data) {
 			fliter = fliter4;
 		}
 		if (fliter.test(radio.value)) {
-			radio.click();
+			if(!radio.checked) {
+				radio.checked = true;
+			}
 		}
 	}
 	for (var i = 0; i < 2; i++) {
 		textArea[i].value = comment[i];
 	}
-	for (i in buttons) {
+	for (var i in buttons) {
 		button = buttons[i];
 		if (button.title == "提交") {
 			button.click();
