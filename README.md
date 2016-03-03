@@ -1,2 +1,2 @@
-# flavor-chrome
-### `damn-jwxt` - 西电教学评估速选器
+# Flavor Chrome Extensions
+### [西电教学评估速选器](./damn-jwxt)
