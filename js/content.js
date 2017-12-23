@@ -1,6 +1,7 @@
 
 // 开始脚本
 function start(data) {
+  alert = function(){} //add alert function to remove alert after finishing one section
   evaluateAuto(data)
   window.frames['bottomFrame'].document.querySelector('[name=mainFrame]').onload = evaluateAuto.bind(null, data)
 }
